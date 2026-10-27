@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تواصل معنا | Alraqi</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { 50:'#faf7f2',100:'#f3ebe0',200:'#e6d5c0',300:'#d4b896',400:'#c19a6b',500:'#b0834d',600:'#9a6b3c',700:'#7d5432',800:'#66452c',900:'#553a27' },
+            dark: { 800:'#1a1a1a',900:'#0f0f0f',950:'#080808' }
+          },
+          fontFamily: { arabic:['Cairo','sans-serif'], english:['Inter','sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-dark-950 text-white font-arabic antialiased">
+
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-dark-950/90 backdrop-blur-md border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <a href="index.html" class="flex items-center gap-2">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center">
+            <span class="text-dark-950 font-bold text-lg">A</span>
+          </div>
+          <span class="text-xl font-bold" data-ar="الراقي" data-en="Alraqi">الراقي</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="nav-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+          <a href="products.html" class="nav-link" data-ar="المنتجات" data-en="Products">المنتجات</a>
+          <a href="about.html" class="nav-link" data-ar="من نحن" data-en="About">من نحن</a>
+          <a href="contact.html" class="nav-link active" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <button id="lang-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/10 text-sm">
+            <span id="lang-label">EN</span>
+          </button>
+          <a href="cart.html" class="relative p-2 rounded-full hover:bg-white/5">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+            <span id="cart-count" class="absolute -top-0.5 -right-0.5 w-5 h-5 bg-primary-500 text-dark-950 text-xs font-bold rounded-full flex items-center justify-center">0</span>
+          </a>
+          <button id="mobile-menu-btn" class="md:hidden p-2"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden border-t border-white/5 bg-dark-900">
+      <div class="px-4 py-4 space-y-1">
+        <a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-white/5" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+        <a href="products.html" class="block px-4 py-3 rounded-lg hover:bg-white/5" data-ar="المنتجات" data-en="Products">المنتجات</a>
+        <a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-white/5" data-ar="من نحن" data-en="About">من نحن</a>
+        <a href="contact.html" class="block px-4 py-3 rounded-lg hover:bg-white/5" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-28 pb-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold mb-4" data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</h1>
+        <p class="text-white/50" data-ar="نسعد بسماعك. أرسل لنا رسالة وسنرد في أقرب وقت." data-en="We'd love to hear from you. Send us a message and we'll reply soon.">
+          نسعد بسماعك. أرسل لنا رسالة وسنرد في أقرب وقت.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-10">
+        <div class="space-y-6">
+          <div class="bg-dark-900 border border-white/5 rounded-2xl p-6">
+            <h3 class="font-semibold mb-4" data-ar="معلومات التواصل" data-en="Contact Information">معلومات التواصل</h3>
+            <ul class="space-y-4 text-sm text-white/60">
+              <li class="flex items-start gap-3">
+                <span class="text-xl">📧</span>
+                <div>
+                  <div class="text-white/40 text-xs mb-0.5" data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</div>
+                  <div>info@alraqi.com</div>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-xl">📱</span>
+                <div>
+                  <div class="text-white/40 text-xs mb-0.5" data-ar="الهاتف / واتساب" data-en="Phone / WhatsApp">الهاتف / واتساب</div>
+                  <div dir="ltr">+20 1XX XXX XXXX</div>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-xl">📍</span>
+                <div>
+                  <div class="text-white/40 text-xs mb-0.5" data-ar="العنوان" data-en="Address">العنوان</div>
+                  <div data-ar="القاهرة، مصر" data-en="Cairo, Egypt">القاهرة، مصر</div>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-xl">🕒</span>
+                <div>
+                  <div class="text-white/40 text-xs mb-0.5" data-ar="ساعات العمل" data-en="Working Hours">ساعات العمل</div>
+                  <div data-ar="السبت - الخميس: 10ص - 8م" data-en="Sat - Thu: 10AM - 8PM">السبت - الخميس: 10ص - 8م</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-dark-900 border border-white/5 rounded-2xl p-6">
+          <form onsubmit="event.preventDefault(); showToast(currentLang==='ar'?'تم إرسال رسالتك بنجاح ✓':'Message sent successfully ✓'); this.reset();" class="space-y-4">
+            <div>
+              <label class="block text-sm text-white/50 mb-1.5" data-ar="الاسم" data-en="Name">الاسم</label>
+              <input type="text" required class="form-input" placeholder="..." />
+            </div>
+            <div>
+              <label class="block text-sm text-white/50 mb-1.5" data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</label>
+              <input type="email" required class="form-input" placeholder="email@example.com" dir="ltr" />
+            </div>
+            <div>
+              <label class="block text-sm text-white/50 mb-1.5" data-ar="الرسالة" data-en="Message">الرسالة</label>
+              <textarea required rows="4" class="form-input resize-none" placeholder="..."></textarea>
+            </div>
+            <button type="submit" class="btn-primary w-full justify-center">
+              <span data-ar="إرسال الرسالة" data-en="Send Message">إرسال الرسالة</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="border-t border-white/5 py-8">
+    <div class="max-w-7xl mx-auto px-4 text-center text-sm text-white/40">
+      © 2026 Alraqi. <span data-ar="جميع الحقوق محفوظة" data-en="All rights reserved">جميع الحقوق محفوظة</span>.
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>من نحن | Alraqi</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { 50:'#faf7f2',100:'#f3ebe0',200:'#e6d5c0',300:'#d4b896',400:'#c19a6b',500:'#b0834d',600:'#9a6b3c',700:'#7d5432',800:'#66452c',900:'#553a27' },
+            dark: { 800:'#1a1a1a',900:'#0f0f0f',950:'#080808' }
+          },
+          fontFamily: { arabic:['Cairo','sans-serif'], english:['Inter','sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-dark-950 text-white font-arabic antialiased">
+
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-dark-950/90 backdrop-blur-md border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <a href="index.html" class="flex items-center gap-2">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center">
+            <span class="text-dark-950 font-bold text-lg">A</span>
+          </div>
+          <span class="text-xl font-bold" data-ar="الراقي" data-en="Alraqi">الراقي</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="nav-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+          <a href="products.html" class="nav-link" data-ar="المنتجات" data-en="Products">المنتجات</a>
+          <a href="about.html" class="nav-link active" data-ar="من نحن" data-en="About">من نحن</a>
+          <a href="contact.html" class="nav-link" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <button id="lang-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/10 text-sm">
+            <span id="lang-label">EN</span>
+          </button>
+          <a href="cart.html" class="relative p-2 rounded-full hover:bg-white/5">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+            <span id="cart-count" class="absolute -top-0.5 -right-0.5 w-5 h-5 bg-primary-500 text-dark-950 text-xs font-bold rounded-full flex items-center justify-center">0</span>
+          </a>
+          <button id="mobile-menu-btn" class="md:hidden p-2"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden border-t border-white/5 bg-dark-900">
+      <div class="px-4 py-4 space-y-1">
+        <a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-white/5" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+        <a href="products.html" class="block px-4 py-3 rounded-lg hover:bg-white/5" data-ar="المنتجات" data-en="Products">المنتجات</a>
+        <a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-white/5" data-ar="من نحن" data-en="About">من نحن</a>
+        <a href="contact.html" class="block px-4 py-3 rounded-lg hover:bg-white/5" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-28 pb-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h1 class="text-4xl font-bold mb-4" data-ar="من نحن" data-en="About Us">من نحن</h1>
+        <p class="text-white/50 text-lg max-w-2xl mx-auto" data-ar="الراقي... اسم يعكس الأناقة والجودة في كل تفصيلة." data-en="Alraqi... a name that reflects elegance and quality in every detail.">
+          الراقي... اسم يعكس الأناقة والجودة في كل تفصيلة.
+        </p>
+      </div>
+
+      <div class="space-y-12">
+        <div class="bg-dark-900 border border-white/5 rounded-2xl p-8 md:p-10">
+          <h2 class="text-2xl font-bold mb-4 text-primary-400" data-ar="قصتنا" data-en="Our Story">قصتنا</h2>
+          <p class="text-white/60 leading-relaxed" data-ar="بدأنا برؤية بسيطة: تقديم منتجات راقية تجمع بين الجودة العالية والتصميم الأنيق بأسعار عادلة. نؤمن أن الأناقة حق للجميع، ولهذا نختار كل منتج بعناية فائقة لنضمن رضا عملائنا." data-en="We started with a simple vision: offering premium products that combine high quality and elegant design at fair prices. We believe elegance is for everyone, which is why we carefully select every product to ensure our customers' satisfaction.">
+            بدأنا برؤية بسيطة: تقديم منتجات راقية تجمع بين الجودة العالية والتصميم الأنيق بأسعار عادلة. نؤمن أن الأناقة حق للجميع، ولهذا نختار كل منتج بعناية فائقة لنضمن رضا عملائنا.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-dark-900 border border-white/5 rounded-2xl p-6 text-center">
+            <div class="text-3xl mb-3">🎯</div>
+            <h3 class="font-semibold mb-2" data-ar="مهمتنا" data-en="Our Mission">مهمتنا</h3>
+            <p class="text-sm text-white/50" data-ar="تقديم تجربة تسوق استثنائية تليق بذوقك الرفيع." data-en="Deliver an exceptional shopping experience that matches your refined taste.">
+              تقديم تجربة تسوق استثنائية تليق بذوقك الرفيع.
+            </p>
+          </div>
+          <div class="bg-dark-900 border border-white/5 rounded-2xl p-6 text-center">
+            <div class="text-3xl mb-3">👁️</div>
+            <h3 class="font-semibold mb-2" data-ar="رؤيتنا" data-en="Our Vision">رؤيتنا</h3>
+            <p class="text-sm text-white/50" data-ar="أن نكون الوجهة الأولى للتسوق الراقي في المنطقة." data-en="To be the premier destination for elegant shopping in the region.">
+              أن نكون الوجهة الأولى للتسوق الراقي في المنطقة.
+            </p>
+          </div>
+          <div class="bg-dark-900 border border-white/5 rounded-2xl p-6 text-center">
+            <div class="text-3xl mb-3">💎</div>
+            <h3 class="font-semibold mb-2" data-ar="قيمنا" data-en="Our Values">قيمنا</h3>
+            <p class="text-sm text-white/50" data-ar="الجودة، الشفافية، والاهتمام بكل عميل." data-en="Quality, transparency, and care for every customer.">
+              الجودة، الشفافية، والاهتمام بكل عميل.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="border-t border-white/5 py-8">
+    <div class="max-w-7xl mx-auto px-4 text-center text-sm text-white/40">
+      © 2026 Alraqi. <span data-ar="جميع الحقوق محفوظة" data-en="All rights reserved">جميع الحقوق محفوظة</span>.
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
