@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>السلة | Alraqi</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { 50:'#faf7f2',100:'#f3ebe0',200:'#e6d5c0',300:'#d4b896',400:'#c19a6b',500:'#b0834d',600:'#9a6b3c',700:'#7d5432',800:'#66452c',900:'#553a27' },
+            dark: { 800:'#1a1a1a',900:'#0f0f0f',950:'#080808' }
+          },
+          fontFamily: { arabic:['Cairo','sans-serif'], english:['Inter','sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-dark-950 text-white font-arabic antialiased">
+
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-dark-950/90 backdrop-blur-md border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <a href="index.html" class="flex items-center gap-2">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center">
+            <span class="text-dark-950 font-bold text-lg">A</span>
+          </div>
+          <span class="text-xl font-bold" data-ar="الراقي" data-en="Alraqi">الراقي</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="nav-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+          <a href="products.html" class="nav-link" data-ar="المنتجات" data-en="Products">المنتجات</a>
+          <a href="about.html" class="nav-link" data-ar="من نحن" data-en="About">من نحن</a>
+          <a href="contact.html" class="nav-link" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <button id="lang-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/10 text-sm">
+            <span id="lang-label">EN</span>
+          </button>
+          <a href="cart.html" class="relative p-2 rounded-full hover:bg-white/5">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+            <span id="cart-count" class="absolute -top-0.5 -right-0.5 w-5 h-5 bg-primary-500 text-dark-950 text-xs font-bold rounded-full flex items-center justify-center">0</span>
+          </a>
+          <button id="mobile-menu-btn" class="md:hidden p-2"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden border-t border-white/5 bg-dark-900">
+      <div class="px-4 py-4 space-y-1">
+        <a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-white/5" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+        <a href="products.html" class="block px-4 py-3 rounded-lg hover:bg-white/5" data-ar="المنتجات" data-en="Products">المنتجات</a>
+        <a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-white/5" data-ar="من نحن" data-en="About">من نحن</a>
+        <a href="contact.html" class="block px-4 py-3 rounded-lg hover:bg-white/5" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-28 pb-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl font-bold mb-8" data-ar="سلة التسوق" data-en="Shopping Cart">سلة التسوق</h1>
+      
+      <div class="grid lg:grid-cols-3 gap-8">
+        <div class="lg:col-span-2 space-y-4" id="cart-items">
+          <!-- Injected by JS -->
+        </div>
+        
+        <div id="cart-summary" class="lg:col-span-1">
+          <div class="bg-dark-900 border border-white/5 rounded-2xl p-6 sticky top-28">
+            <h2 class="font-semibold text-lg mb-4" data-ar="ملخص الطلب" data-en="Order Summary">ملخص الطلب</h2>
+            <div class="space-y-3 text-sm">
+              <div class="flex justify-between text-white/60">
+                <span id="cart-items-count">0 منتج</span>
+                <span id="cart-subtotal">—</span>
+              </div>
+              <div class="flex justify-between text-white/60">
+                <span data-ar="الشحن" data-en="Shipping">الشحن</span>
+                <span data-ar="يُحسب عند الدفع" data-en="Calculated at checkout">يُحسب عند الدفع</span>
+              </div>
+              <div class="border-t border-white/10 pt-3 flex justify-between font-semibold text-lg">
+                <span data-ar="الإجمالي" data-en="Total">الإجمالي</span>
+                <span id="cart-total" class="text-primary-400">0</span>
+              </div>
+            </div>
+            <button onclick="showToast(currentLang==='ar'?'قريباً: بوابة الدفع':'Coming soon: Payment gateway')" class="btn-primary w-full justify-center mt-6">
+              <span data-ar="إتمام الشراء" data-en="Checkout">إتمام الشراء</span>
+            </button>
+            <a href="products.html" class="block text-center text-sm text-white/50 hover:text-primary-400 mt-4 transition-colors">
+              <span data-ar="← متابعة التسوق" data-en="Continue Shopping →">← متابعة التسوق</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="border-t border-white/5 py-8">
+    <div class="max-w-7xl mx-auto px-4 text-center text-sm text-white/40">
+      © 2026 Alraqi. <span data-ar="جميع الحقوق محفوظة" data-en="All rights reserved">جميع الحقوق محفوظة</span>.
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

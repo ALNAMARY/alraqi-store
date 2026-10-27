@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>المنتجات | Alraqi</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { 50:'#faf7f2',100:'#f3ebe0',200:'#e6d5c0',300:'#d4b896',400:'#c19a6b',500:'#b0834d',600:'#9a6b3c',700:'#7d5432',800:'#66452c',900:'#553a27' },
+            dark: { 800:'#1a1a1a',900:'#0f0f0f',950:'#080808' }
+          },
+          fontFamily: { arabic:['Cairo','sans-serif'], english:['Inter','sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-dark-950 text-white font-arabic antialiased">
+
+  <!-- Header -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-dark-950/90 backdrop-blur-md border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <a href="index.html" class="flex items-center gap-2">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center shadow-lg shadow-primary-500/20">
+            <span class="text-dark-950 font-bold text-lg">A</span>
+          </div>
+          <div>
+            <span class="text-xl font-bold tracking-tight" data-ar="الراقي" data-en="Alraqi">الراقي</span>
+            <span class="block text-[10px] text-primary-400 -mt-1 tracking-widest uppercase" data-ar="متجر إلكتروني" data-en="Premium Store">متجر إلكتروني</span>
+          </div>
+        </a>
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="nav-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+          <a href="products.html" class="nav-link active" data-ar="المنتجات" data-en="Products">المنتجات</a>
+          <a href="about.html" class="nav-link" data-ar="من نحن" data-en="About">من نحن</a>
+          <a href="contact.html" class="nav-link" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <button id="lang-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/10 hover:border-primary-500/50 transition-all text-sm">
+            <span id="lang-label">EN</span>
+          </button>
+          <a href="cart.html" class="relative p-2 rounded-full hover:bg-white/5 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+            <span id="cart-count" class="absolute -top-0.5 -right-0.5 w-5 h-5 bg-primary-500 text-dark-950 text-xs font-bold rounded-full flex items-center justify-center">0</span>
+          </a>
+          <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-white/5">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden border-t border-white/5 bg-dark-900">
+      <div class="px-4 py-4 space-y-1">
+        <a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-white/5" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+        <a href="products.html" class="block px-4 py-3 rounded-lg hover:bg-white/5" data-ar="المنتجات" data-en="Products">المنتجات</a>
+        <a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-white/5" data-ar="من نحن" data-en="About">من نحن</a>
+        <a href="contact.html" class="block px-4 py-3 rounded-lg hover:bg-white/5" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-28 pb-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-10">
+        <h1 class="text-3xl font-bold mb-2" data-ar="جميع المنتجات" data-en="All Products">جميع المنتجات</h1>
+        <p class="text-white/50" data-ar="اكتشف مجموعتنا الكاملة" data-en="Discover our full collection">اكتشف مجموعتنا الكاملة</p>
+      </div>
+
+      <!-- Filters -->
+      <div class="flex flex-wrap gap-2 mb-8">
+        <a href="products.html" class="px-4 py-2 rounded-full text-sm border border-white/10 hover:border-primary-500/50 transition-all" data-ar="الكل" data-en="All">الكل</a>
+        <a href="products.html?cat=new" class="px-4 py-2 rounded-full text-sm border border-white/10 hover:border-primary-500/50 transition-all" data-ar="جديد" data-en="New">جديد</a>
+        <a href="products.html?cat=bestsellers" class="px-4 py-2 rounded-full text-sm border border-white/10 hover:border-primary-500/50 transition-all" data-ar="الأكثر مبيعاً" data-en="Bestsellers">الأكثر مبيعاً</a>
+        <a href="products.html?cat=luxury" class="px-4 py-2 rounded-full text-sm border border-white/10 hover:border-primary-500/50 transition-all" data-ar="فاخر" data-en="Luxury">فاخر</a>
+        <a href="products.html?cat=sale" class="px-4 py-2 rounded-full text-sm border border-white/10 hover:border-primary-500/50 transition-all" data-ar="عروض" data-en="Sale">عروض</a>
+      </div>
+
+      <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </main>
+
+  <footer class="border-t border-white/5 py-8">
+    <div class="max-w-7xl mx-auto px-4 text-center text-sm text-white/40">
+      © 2026 Alraqi. <span data-ar="جميع الحقوق محفوظة" data-en="All rights reserved">جميع الحقوق محفوظة</span>.
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
