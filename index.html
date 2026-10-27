@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alraqi | الراقي</title>
+  <meta name="description" content="Alraqi - Premium Online Store | متجر الراقي الإلكتروني" />
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#faf7f2',
+              100: '#f3ebe0',
+              200: '#e6d5c0',
+              300: '#d4b896',
+              400: '#c19a6b',
+              500: '#b0834d',
+              600: '#9a6b3c',
+              700: '#7d5432',
+              800: '#66452c',
+              900: '#553a27',
+            },
+            dark: {
+              800: '#1a1a1a',
+              900: '#0f0f0f',
+              950: '#080808',
+            }
+          },
+          fontFamily: {
+            arabic: ['Cairo', 'sans-serif'],
+            english: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-dark-950 text-white font-arabic antialiased">
+
+  <!-- Header -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-dark-950/90 backdrop-blur-md border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2 group">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center shadow-lg shadow-primary-500/20">
+            <span class="text-dark-950 font-bold text-lg">A</span>
+          </div>
+          <div>
+            <span class="text-xl font-bold tracking-tight" data-ar="الراقي" data-en="Alraqi">الراقي</span>
+            <span class="block text-[10px] text-primary-400 -mt-1 tracking-widest uppercase" data-ar="متجر إلكتروني" data-en="Premium Store">متجر إلكتروني</span>
+          </div>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="nav-link active" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+          <a href="products.html" class="nav-link" data-ar="المنتجات" data-en="Products">المنتجات</a>
+          <a href="about.html" class="nav-link" data-ar="من نحن" data-en="About">من نحن</a>
+          <a href="contact.html" class="nav-link" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a>
+        </nav>
+
+        <!-- Actions -->
+        <div class="flex items-center gap-3">
+          <!-- Language Switcher -->
+          <button id="lang-toggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/10 hover:border-primary-500/50 transition-all text-sm">
+            <span id="lang-label">EN</span>
+          </button>
+
+          <!-- Cart -->
+          <a href="cart.html" class="relative p-2 rounded-full hover:bg-white/5 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+            </svg>
+            <span id="cart-count" class="absolute -top-0.5 -right-0.5 w-5 h-5 bg-primary-500 text-dark-950 text-xs font-bold rounded-full flex items-center justify-center">0</span>
+          </a>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-white/5">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-white/5 bg-dark-900">
+      <div class="px-4 py-4 space-y-1">
+        <a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-white/5" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+        <a href="products.html" class="block px-4 py-3 rounded-lg hover:bg-white/5" data-ar="المنتجات" data-en="Products">المنتجات</a>
+        <a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-white/5" data-ar="من نحن" data-en="About">من نحن</a>
+        <a href="contact.html" class="block px-4 py-3 rounded-lg hover:bg-white/5" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-dark-950 via-dark-900 to-primary-900/20"></div>
+    <div class="absolute top-1/4 -right-32 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-1/4 -left-32 w-80 h-80 bg-primary-600/10 rounded-full blur-3xl"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        
+        <div class="text-center lg:text-start space-y-8">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-500/10 border border-primary-500/20 text-primary-400 text-sm">
+            <span class="w-2 h-2 rounded-full bg-primary-400 animate-pulse"></span>
+            <span data-ar="مجموعة جديدة 2026" data-en="New Collection 2026">مجموعة جديدة 2026</span>
+          </div>
+          
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+            <span data-ar="أناقة تليق بك" data-en="Elegance Made">أناقة تليق بك</span>
+            <span class="block text-primary-400" data-ar="لمن يستحق الأفضل" data-en="For Those Who Deserve">لمن يستحق الأفضل</span>
+          </h1>
+          
+          <p class="text-lg text-white/60 max-w-lg mx-auto lg:mx-0" data-ar="اكتشف مجموعة مختارة بعناية من المنتجات الفاخرة التي تجمع بين الجودة العالية والتصميم الأنيق." data-en="Discover a carefully curated collection of premium products that combine high quality with elegant design.">
+            اكتشف مجموعة مختارة بعناية من المنتجات الفاخرة التي تجمع بين الجودة العالية والتصميم الأنيق.
+          </p>
+          
+          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <a href="products.html" class="btn-primary">
+              <span data-ar="تسوق الآن" data-en="Shop Now">تسوق الآن</span>
+              <svg class="w-5 h-5 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </a>
+            <a href="about.html" class="btn-secondary">
+              <span data-ar="اعرف المزيد" data-en="Learn More">اعرف المزيد</span>
+            </a>
+          </div>
+
+          <div class="flex items-center justify-center lg:justify-start gap-8 pt-4">
+            <div>
+              <div class="text-2xl font-bold text-primary-400">500+</div>
+              <div class="text-sm text-white/50" data-ar="منتج" data-en="Products">منتج</div>
+            </div>
+            <div class="w-px h-10 bg-white/10"></div>
+            <div>
+              <div class="text-2xl font-bold text-primary-400">10k+</div>
+              <div class="text-sm text-white/50" data-ar="عميل سعيد" data-en="Happy Clients">عميل سعيد</div>
+            </div>
+            <div class="w-px h-10 bg-white/10"></div>
+            <div>
+              <div class="text-2xl font-bold text-primary-400">4.9</div>
+              <div class="text-sm text-white/50" data-ar="تقييم" data-en="Rating">تقييم</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative hidden lg:block">
+          <div class="relative aspect-square max-w-md mx-auto">
+            <div class="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-transparent rounded-3xl"></div>
+            <div class="absolute inset-4 bg-dark-800 rounded-2xl border border-white/5 flex items-center justify-center">
+              <div class="text-center space-y-4">
+                <div class="w-24 h-24 mx-auto rounded-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center shadow-2xl shadow-primary-500/30">
+                  <span class="text-4xl font-bold text-dark-950">A</span>
+                </div>
+                <p class="text-white/40 text-sm tracking-widest uppercase">Alraqi Collection</p>
+              </div>
+            </div>
+            <div class="absolute -top-4 -right-4 bg-dark-800 border border-white/10 rounded-2xl px-4 py-3 shadow-xl">
+              <div class="text-primary-400 font-bold">-30%</div>
+              <div class="text-xs text-white/50" data-ar="عرض خاص" data-en="Special Offer">عرض خاص</div>
+            </div>
+            <div class="absolute -bottom-4 -left-4 bg-dark-800 border border-white/10 rounded-2xl px-4 py-3 shadow-xl">
+              <div class="flex items-center gap-1 text-yellow-400 text-sm">★★★★★</div>
+              <div class="text-xs text-white/50" data-ar="تقييم العملاء" data-en="Customer Rating">تقييم العملاء</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Categories -->
+  <section class="py-20 bg-dark-900/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-3" data-ar="تصفح حسب الفئة" data-en="Shop by Category">تصفح حسب الفئة</h2>
+        <p class="text-white/50" data-ar="اختر من مجموعاتنا المميزة" data-en="Choose from our exclusive collections">اختر من مجموعاتنا المميزة</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+        <a href="products.html?cat=new" class="category-card group">
+          <div class="aspect-square rounded-2xl bg-gradient-to-br from-primary-500/20 to-primary-700/10 border border-white/5 flex flex-col items-center justify-center gap-3 group-hover:border-primary-500/40 transition-all">
+            <div class="w-14 h-14 rounded-full bg-primary-500/20 flex items-center justify-center text-2xl">✨</div>
+            <span class="font-medium" data-ar="وصل حديثاً" data-en="New Arrivals">وصل حديثاً</span>
+          </div>
+        </a>
+        <a href="products.html?cat=bestsellers" class="category-card group">
+          <div class="aspect-square rounded-2xl bg-gradient-to-br from-primary-500/20 to-primary-700/10 border border-white/5 flex flex-col items-center justify-center gap-3 group-hover:border-primary-500/40 transition-all">
+            <div class="w-14 h-14 rounded-full bg-primary-500/20 flex items-center justify-center text-2xl">🔥</div>
+            <span class="font-medium" data-ar="الأكثر مبيعاً" data-en="Best Sellers">الأكثر مبيعاً</span>
+          </div>
+        </a>
+        <a href="products.html?cat=luxury" class="category-card group">
+          <div class="aspect-square rounded-2xl bg-gradient-to-br from-primary-500/20 to-primary-700/10 border border-white/5 flex flex-col items-center justify-center gap-3 group-hover:border-primary-500/40 transition-all">
+            <div class="w-14 h-14 rounded-full bg-primary-500/20 flex items-center justify-center text-2xl">💎</div>
+            <span class="font-medium" data-ar="فاخر" data-en="Luxury">فاخر</span>
+          </div>
+        </a>
+        <a href="products.html?cat=sale" class="category-card group">
+          <div class="aspect-square rounded-2xl bg-gradient-to-br from-primary-500/20 to-primary-700/10 border border-white/5 flex flex-col items-center justify-center gap-3 group-hover:border-primary-500/40 transition-all">
+            <div class="w-14 h-14 rounded-full bg-primary-500/20 flex items-center justify-center text-2xl">🏷️</div>
+            <span class="font-medium" data-ar="عروض" data-en="Sale">عروض</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between mb-12">
+        <div>
+          <h2 class="text-3xl font-bold mb-2" data-ar="منتجات مميزة" data-en="Featured Products">منتجات مميزة</h2>
+          <p class="text-white/50" data-ar="اختياراتنا الأفضل لك" data-en="Our best picks for you">اختياراتنا الأفضل لك</p>
+        </div>
+        <a href="products.html" class="hidden sm:flex items-center gap-2 text-primary-400 hover:text-primary-300 transition-colors">
+          <span data-ar="عرض الكل" data-en="View All">عرض الكل</span>
+          <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
+      <div id="featured-products" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Products will be injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Promo Banner -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-primary-700 via-primary-600 to-primary-500 p-8 md:p-12">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+        <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="text-center md:text-start">
+            <h3 class="text-2xl md:text-3xl font-bold text-dark-950 mb-2" data-ar="خصم 25% على أول طلب" data-en="25% Off Your First Order">خصم 25% على أول طلب</h3>
+            <p class="text-dark-950/70" data-ar="استخدم كود: ALRAQI25 عند الدفع" data-en="Use code: ALRAQI25 at checkout">استخدم كود: ALRAQI25 عند الدفع</p>
+          </div>
+          <a href="products.html" class="px-8 py-3 bg-dark-950 text-white font-semibold rounded-full hover:bg-dark-900 transition-colors whitespace-nowrap">
+            <span data-ar="احصل على العرض" data-en="Get the Offer">احصل على العرض</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Us -->
+  <section class="py-20 bg-dark-900/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-3" data-ar="لماذا تختار الراقي؟" data-en="Why Choose Alraqi?">لماذا تختار الراقي؟</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center p-6">
+          <div class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-primary-500/10 flex items-center justify-center text-3xl">🚚</div>
+          <h3 class="font-semibold text-lg mb-2" data-ar="شحن سريع" data-en="Fast Shipping">شحن سريع</h3>
+          <p class="text-white/50 text-sm" data-ar="توصيل خلال 2-5 أيام عمل داخل مصر والدول العربية" data-en="Delivery within 2-5 business days across Egypt & Arab countries">توصيل خلال 2-5 أيام عمل داخل مصر والدول العربية</p>
+        </div>
+        <div class="text-center p-6">
+          <div class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-primary-500/10 flex items-center justify-center text-3xl">🔒</div>
+          <h3 class="font-semibold text-lg mb-2" data-ar="دفع آمن" data-en="Secure Payment">دفع آمن</h3>
+          <p class="text-white/50 text-sm" data-ar="طرق دفع متعددة وآمنة 100%" data-en="Multiple secure payment methods">طرق دفع متعددة وآمنة 100%</p>
+        </div>
+        <div class="text-center p-6">
+          <div class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-primary-500/10 flex items-center justify-center text-3xl">↩️</div>
+          <h3 class="font-semibold text-lg mb-2" data-ar="إرجاع سهل" data-en="Easy Returns">إرجاع سهل</h3>
+          <p class="text-white/50 text-sm" data-ar="إرجاع مجاني خلال 14 يوم" data-en="Free returns within 14 days">إرجاع مجاني خلال 14 يوم</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/5 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+        <div class="md:col-span-1">
+          <div class="flex items-center gap-2 mb-4">
+            <div class="w-9 h-9 rounded-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center">
+              <span class="text-dark-950 font-bold">A</span>
+            </div>
+            <span class="text-lg font-bold" data-ar="الراقي" data-en="Alraqi">الراقي</span>
+          </div>
+          <p class="text-white/40 text-sm leading-relaxed" data-ar="متجر إلكتروني راقي يقدم أفضل المنتجات بجودة عالية وتصميم أنيق." data-en="A premium online store offering the finest products with high quality and elegant design.">
+            متجر إلكتروني راقي يقدم أفضل المنتجات بجودة عالية وتصميم أنيق.
+          </p>
+        </div>
+        
+        <div>
+          <h4 class="font-semibold mb-4" data-ar="روابط سريعة" data-en="Quick Links">روابط سريعة</h4>
+          <ul class="space-y-2 text-sm text-white/50">
+            <li><a href="index.html" class="hover:text-primary-400 transition-colors" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+            <li><a href="products.html" class="hover:text-primary-400 transition-colors" data-ar="المنتجات" data-en="Products">المنتجات</a></li>
+            <li><a href="about.html" class="hover:text-primary-400 transition-colors" data-ar="من نحن" data-en="About">من نحن</a></li>
+            <li><a href="contact.html" class="hover:text-primary-400 transition-colors" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="font-semibold mb-4" data-ar="خدمة العملاء" data-en="Customer Service">خدمة العملاء</h4>
+          <ul class="space-y-2 text-sm text-white/50">
+            <li><a href="#" class="hover:text-primary-400 transition-colors" data-ar="سياسة الشحن" data-en="Shipping Policy">سياسة الشحن</a></li>
+            <li><a href="#" class="hover:text-primary-400 transition-colors" data-ar="سياسة الإرجاع" data-en="Return Policy">سياسة الإرجاع</a></li>
+            <li><a href="#" class="hover:text-primary-400 transition-colors" data-ar="الأسئلة الشائعة" data-en="FAQ">الأسئلة الشائعة</a></li>
+            <li><a href="#" class="hover:text-primary-400 transition-colors" data-ar="الدعم الفني" data-en="Support">الدعم الفني</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="font-semibold mb-4" data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</h4>
+          <ul class="space-y-3 text-sm text-white/50">
+            <li class="flex items-center gap-2">
+              <span>📧</span>
+              <span>info@alraqi.com</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span>📱</span>
+              <span dir="ltr">+20 1XX XXX XXXX</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span>📍</span>
+              <span data-ar="القاهرة، مصر" data-en="Cairo, Egypt">القاهرة، مصر</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-white/40">
+        <p>© 2026 Alraqi. <span data-ar="جميع الحقوق محفوظة" data-en="All rights reserved">جميع الحقوق محفوظة</span>.</p>
+        <div class="flex gap-4">
+          <a href="#" class="hover:text-primary-400 transition-colors">Instagram</a>
+          <a href="#" class="hover:text-primary-400 transition-colors">Facebook</a>
+          <a href="#" class="hover:text-primary-400 transition-colors">TikTok</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
